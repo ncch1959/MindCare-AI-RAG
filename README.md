@@ -12,15 +12,15 @@
 
 # 📖 Descripción
 
-**Black_Ary Knowledge AI** es un asistente inteligente empresarial desarrollado para responder consultas sobre documentos internos utilizando técnicas de **Retrieval-Augmented Generation (RAG)**.
+**Black_Ary Knowledge AI** es un asistente inteligente sobre salud mental desarrollado para responder consultas sobre documentos emitidos por autoridades sanitarias nacional como internacionañes de **Retrieval-Augmented Generation (RAG)**.
 
-El sistema combina búsqueda semántica con Inteligencia Artificial Generativa para entregar respuestas precisas, rápidas y fundamentadas en la documentación corporativa.
+El sistema combina búsqueda semántica con Inteligencia Artificial Generativa para entregar respuestas precisas, rápidas y fundamentadas en la documentación fuente.
 
 ---
 
 # ✨ Características
 
-- 🤖 Chat inteligente empresarial
+- 🤖 Chat inteligente de medecina mental
 - 📄 Consulta de documentos PDF y Word
 - 🧠 Búsqueda semántica mediante FAISS
 - 🔍 Recuperación inteligente de información (RAG)
@@ -48,7 +48,7 @@ El sistema combina búsqueda semántica con Inteligencia Artificial Generativa p
         FAISS Vector DB     Google Gemini
              │
              ▼
-   Documentos Corporativos
+   Documentos de Salud Mental
    PDF • DOCX • Manuales
 ```
 
@@ -71,10 +71,10 @@ Enterprise-Knowledge-Agent/
 ├── embeddings/
 │
 ├── images/
-│     ├── logo_blackary.png
-│     ├── banner_blackary.png
-│     ├── screenshot_home.png
-│     └── screenshot_chat.png
+│     ├── logo_blackary Spa.png
+│     
+│     
+│  
 │
 └── vectorstore/
 ```
@@ -158,12 +158,17 @@ streamlit run app.py
 
 # 💬 Ejemplos de preguntas
 
-- ¿Qué beneficios tiene un colaborador?
-- ¿Cómo funciona la política de vacaciones?
-- ¿Qué es el programa PLR?
-- ¿Cuál es el presupuesto anual para capacitación?
-- ¿Cómo solicitar un viaje corporativo?
-- ¿Qué indica el Manual de Recursos Humanos?
+1 ¿Qué factores sociales y económicos influyen más en el aumento de los trastornos de ansiedad y depresión en la actualidad?
+
+2 ¿Cómo impacta el envejecimiento poblacional en la prevalencia de enfermedades neurodegenerativas como el Alzheimer y el Parkinson?
+
+3 ¿Qué papel juega la digitalización (apps, redes sociales, telemedicina) en el cuidado de la salud mental y cuáles son sus riesgos?
+
+4 ¿Por qué existe una brecha tan grande entre la necesidad de atención en salud mental y la cobertura real de los sistemas de salud?
+
+5 ¿Qué estrategias comunitarias podrían ayudar a reducir el estigma asociado a los trastornos mentales?
+
+6 ¿Cómo se relacionan las crisis globales (cambio climático, migración, conflictos) con el incremento de problemas de salud mental en poblaciones vulnerables?
 
 ---
 
@@ -175,7 +180,7 @@ streamlit run app.py
 
 ---
 
-## Chat Empresarial
+## Chat salud mental
 
 *(Agregar captura aquí)*
 
@@ -197,7 +202,7 @@ streamlit run app.py
 
 # 👨‍💻 Autor
 
-**Nelson Cossio**
+**Nelson Cossio Chiang**
 
 Ingeniero Constructor | Desarrollador de Soluciones con IA
 
@@ -227,8 +232,15 @@ Representa:
 - Curiosidad
 - Innovación
 
-Estos valores inspiran el desarrollo de soluciones de Inteligencia Artificial orientadas a mejorar la forma en que las personas acceden al conocimiento.
+"Estos valores inspiran el desarrollo de la implementación de aplicaciones para adultos mayores, con poca y/o nada d accecibilidad de recursos económicos y redes de apoyo, y a personas cuidadoras que dsconocen o poco saben sobre enfermedades degenerativas mentales.
 
+La Inteligencia Artificial orientadas a mejorar la forma en que las personas de la tercera edad acceden al conocimiento, de manera rápida, discreta, promoviendo su autonomía y bienestar."
+
+Enfocado en inclusión: “…de manera rápida, discreta y equitativa, garantizando que nadie quede fuera del mundo digital.”
+
+Enfocado en autonomía: “…de manera rápida, discreta y sencilla, fortaleciendo su independencia en el aprendizaje.”
+
+Enfocado en calidad de vida: “…de manera rápida, discreta y significativa, contribuyendo a una mejor calidad de vida.”
 ---
 
 # 🎓 Proyecto desarrollado para
