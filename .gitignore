@@ -1,0 +1,9 @@
+venv/
+.env
+__pycache__/
+embeddings/
+*.pyc
+*.pyo
+.vscode/
+.idea/
+.DS_Store
