@@ -1,6 +1,6 @@
 import streamlit as st
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_community.llms import Ollama
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
@@ -33,11 +33,10 @@ def load_agent():
         }
     )
 
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
-        google_api_key=GOOGLE_API_KEY,
-        temperature=0.1,
-        max_output_tokens=800
+    llm = Ollama(
+    model="llama3.1:8b",
+    temperature=0.1
+
     )
 
     return llm, retriever
@@ -156,6 +155,7 @@ RESPUESTA
             sources.append(source)
 
     return {
-        "answer": response.content,
-        "sources": sources
-    }
+    "answer": response,
+    "sources": sources
+}
+    
