@@ -1,7 +1,7 @@
 import streamlit as st
 
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
 from config import (
@@ -15,9 +15,9 @@ def load_agent():
 
     print("Cargando agente RAG...")
 
-    embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/gemini-embedding-001",
-        google_api_key=GOOGLE_API_KEY
+    embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+
     )
 
     vectorstore = FAISS.load_local(
@@ -29,15 +29,15 @@ def load_agent():
     retriever = vectorstore.as_retriever(
         search_type="similarity",
         search_kwargs={
-            "k": 4
+            "k": 10
         }
     )
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
+        model="gemini-2.0-flash",
         google_api_key=GOOGLE_API_KEY,
         temperature=0.1,
-        max_output_tokens=350
+        max_output_tokens=800
     )
 
     return llm, retriever
@@ -76,7 +76,9 @@ Debes responder utilizando EXCLUSIVAMENTE la información entregada en el contex
 REGLAS IMPORTANTES:
 
 - Contesta únicamente la pregunta realizada.
-- Responde de forma breve y profesional.
+- Responde de forma clara, profesional y suficientemente desarrollada.
+- Incluye los puntos principales encontrados en los documentos.
+- Organiza la respuesta en secciones o viñetas cuando la pregunta sea   amplia.
 - Resume la información incluyendo todos los puntos relevantes encontrados.
 - No copies capítulos completos.
 - No repitas información.
